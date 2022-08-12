@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { Post.new(user_id: 2, title: 'Hello', text: 'This is my first post') }
+  user = User.create(name: 'Grabrielle', photo: 'mybaby.png', bio: 'A beautiful baby', post_counter: 0)
+  subject { Post.new(user_id: user.id, title: 'Hello', text: 'This is my first post') }
   before { subject.save }
 
   it 'title should be present' do
@@ -46,5 +47,14 @@ RSpec.describe Post, type: :model do
 
   it 'most_recent_comments should always return a total number of 5 comments' do
     expect(subject.most_recent_comments).to eq(subject.comments.last(5))
+  end
+
+  it 'user post count should be 0' do
+    expect(user.post_counter).to eq 0
+  end
+
+  it 'update_users_posts_counter should increment the total posts by 1' do
+    subject.update_users_posts_counter
+    expect(subject.user.post_counter).to eq 1
   end
 end
