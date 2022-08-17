@@ -2,10 +2,6 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments, :likes)
-    @posts.each do |post|
-      post.update_posts_comments_counter
-      post.update_posts_likes_counter
-    end
   end
 
   def show
