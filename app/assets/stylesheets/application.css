@@ -49,6 +49,11 @@ main {
   border-radius: 5px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .user a {
   text-decoration: none;
   color: #000;
@@ -127,11 +132,6 @@ main {
 
 .user_comments {
   padding-left: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .post_details {
