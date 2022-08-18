@@ -8,6 +8,9 @@
           <div class="user_name">
             <h2><%= @user.name %></h2>
             <h4>Number of posts: <%= @user.post_counter %></h4>
+            <div class="btn_create_post">
+              <%= link_to "Create New Post", new_user_post_path , class: "btn_post_new" %>
+            </div>
           </div>
         </div>
       </div>

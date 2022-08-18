@@ -10,6 +10,12 @@
         <p><%= @post.text %></p>
       </div>
       <hr>
+      <div class="post_details_likes">
+        <%= render "posts/like_form" %>
+      </div>
+      <div class="post_details_comments">
+        <%= render "posts/comment_form" %>
+      </div>
       <div class="user_comments">
         <% if @comments.length == 0 %>
           <p>No comments for now. Be the first to comment</p>
