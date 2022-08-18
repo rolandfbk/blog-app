@@ -19,18 +19,18 @@ class PostsController < ApplicationController
     @post.likes_counter = 0
     @post.comments_counter = 0
     @post.update_users_posts_counter
-    
+
     respond_to do |format|
       format.html do
         if @post.save
-          flash[:success] = "Post saved successfully"
+          flash[:success] = 'Post saved successfully'
           redirect_to new_user_post_path(current_user)
         else
-          flash.now[:error] = "Error: Post could not be saved. Please try again."
+          flash.now[:error] = 'Error: Post could not be saved. Please try again.'
           render :new
         end
       end
-    end 
+    end
   end
 
   def post_params
