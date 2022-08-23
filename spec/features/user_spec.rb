@@ -36,8 +36,7 @@ RSpec.describe 'Users pages test', type: :feature do
     end
 
     it "Should navigate to user's show page" do
-      visit users_path
-      click_link user_path(@user_first.id)
+      visit user_path(@user_first.id)
       expect(current_path).to eq(user_path(@user_first.id))
     end
   end
