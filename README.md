@@ -24,6 +24,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@rolandfbk](https://twitter.com/rolandfbk)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/roland-ossisa-yuma)
 
+👤 **Temitope Ogunleye**
+
+- GitHub: [@topeogunleye](https://github.com/topeogunleye)
+- Twitter: [@tope_leye](https://twitter.com/tope_leye)
+- LinkedIn: [ogunleye](https://linkedin.com/in/ogunleye)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
