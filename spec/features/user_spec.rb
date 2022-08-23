@@ -110,4 +110,4 @@ RSpec.describe 'Users pages test', type: :feature do
       expect(current_path).to eq(user_posts_path(@user_first.id))
     end
   end
- end
+end

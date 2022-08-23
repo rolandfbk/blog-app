@@ -146,4 +146,4 @@ RSpec.describe 'Post pages test', type: :feature do
       expect(page).to have_content('My first comment')
     end
   end
- end
+end
