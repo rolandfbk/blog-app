@@ -7,6 +7,8 @@ gem 'rails-controller-testing'
 
 gem 'bullet'
 
+gem 'devise'
+
 gem 'bootstrap_form'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
