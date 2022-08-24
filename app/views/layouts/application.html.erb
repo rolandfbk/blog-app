@@ -18,7 +18,14 @@
 
     <main>
       <div class="list">
-        
+        <div class="sign_out">
+          <% if user_signed_in? %>
+            <div>welcome <%= current_user.name %></div>
+            <%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn" %>
+          <% end %>
+        </div>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         <%= yield %>
       </div>
     </main>
