@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
@@ -90,6 +91,12 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    devise (4.8.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.5.0)
     digest (3.1.0)
     erubi (1.11.0)
@@ -135,6 +142,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
+    orm_adapter (0.5.0)
     pg (1.4.3)
     public_suffix (4.0.7)
     puma (5.6.4)
@@ -175,6 +183,9 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     regexp_parser (2.5.0)
+    responders (3.0.1)
+      actionpack (>= 5.0)
+      railties (>= 5.0)
     rexml (3.2.5)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
@@ -218,6 +229,8 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uniform_notifier (1.16.0)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -244,6 +257,7 @@ DEPENDENCIES
   bootstrap_form
   bullet
   capybara
+  devise
   importmap-rails
   jbuilder
   pg (~> 1.1)

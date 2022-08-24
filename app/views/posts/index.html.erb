@@ -1,40 +1,36 @@
-<main>
-  <div class="list">
-      <div class="user">
-        <div class="user_details">
-          <div class="user_photo">
-            <img src="/assets/<%=@user.photo %>">
-          </div>
-          <div class="user_name">
-            <h2><%= @user.name %></h2>
-            <h4>Number of posts: <%= @user.post_counter %></h4>
-            <div class="btn_create_post">
-              <%= link_to "Create New Post", new_user_post_path , class: "btn_post_new" %>
-            </div>
-          </div>
-        </div>
+<div class="user">
+  <div class="user_details">
+    <div class="user_photo">
+      <img src="/assets/<%=@user.photo %>">
+    </div>
+    <div class="user_name">
+      <h2><%= @user.name %></h2>
+      <h4>Number of posts: <%= @user.post_counter %></h4>
+      <div class="btn_create_post">
+        <%= link_to "Create New Post", new_user_post_path , class: "btn_post_new" %>
       </div>
-
-      <% @posts.each_with_index do |post, index| %>
-        <div class="user_posts">
-          <h3>Post #<%=index+1%>: <%= link_to "#{post.title}", user_post_path(@user.id, post.id) %></h3>
-          <p><%= post.text %></p>
-          <h4><span>Comment <%= post.comments_counter %></span> <span>|</span> <span>Likes <%= post.likes_counter %></span></h4>
-          <hr>
-          <div class="user_comments">
-            <% if post.most_recent_comments.length == 0 %>
-              <p>No comments for now. Be the first to comment</p>
-            <% else %>
-              <% post.most_recent_comments.each do |comment| %>
-                <p><%= comment.user.name%>: <%= comment.text%></p>
-              <%end%>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-      
-      <div class="btn_bottom">
-          <%= link_to "Pagination", "#", class: "btn_all_posts" %>
-      </div>
+    </div>
   </div>
-</main>
+</div>
+
+<% @posts.each_with_index do |post, index| %>
+  <div class="user_posts">
+    <h3>Post #<%=index+1%>: <%= link_to "#{post.title}", user_post_path(@user.id, post.id) %></h3>
+    <p><%= post.text %></p>
+    <h4><span>Comment <%= post.comments_counter %></span> <span>|</span> <span>Likes <%= post.likes_counter %></span></h4>
+    <hr>
+    <div class="user_comments">
+      <% if post.most_recent_comments.length == 0 %>
+        <p>No comments for now. Be the first to comment</p>
+      <% else %>
+        <% post.most_recent_comments.each do |comment| %>
+          <p><%= comment.user.name%>: <%= comment.text%></p>
+        <%end%>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class="btn_bottom">
+    <%= link_to "Pagination", "#", class: "btn_all_posts" %>
+</div>
