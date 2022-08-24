@@ -15,13 +15,12 @@
       <h1>DreamArt Blog</h1>
     </div>
     
-
     <main>
       <div class="list">
         <div class="sign_out">
           <% if user_signed_in? %>
-            <div>welcome <%= current_user.name %></div>
-            <%= button_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn" %>
+            <div>Welcome <%= current_user.name %></div>
+            <%= button_to "Logout", destroy_user_session_path, :method => :delete, class: "btn_signout_from" %>
           <% end %>
         </div>
         <p class="notice"><%= notice %></p>
