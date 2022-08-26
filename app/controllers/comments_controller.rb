@@ -18,27 +18,11 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:comment_id])
     @post = Post.find(@comment.post_id)
-    # @post.comments_counter -= 1
     @comment.destroy!
     
     @comment.post.decrement!(:comments_counter)
     flash[:success] = 'Comment deleted successfully'
-    redirect_to user_post_path(current_user, @comment.post_id)
-    # @comment.destroy
-    # redirect_to user_post_path(current_user, @post.id)
-
-    # respond_to do |format|
-    #   format.html do
-    #     if @comment.destroy
-    #       @comment.post.decrement!(:comments_counter)
-    #       flash[:success] = 'Comment deleted successfully'
-    #       redirect_to user_post_path(current_user, @post.id)
-    #     else
-    #       flash.now[:error] = 'Error: Comment could not be deleted. Please try again.'
-    #       redirect_to :back
-    #     end
-    #   end
-    # end
+    redirect_to user_post_path(current_user, @comment.post_id) 
   end
 
   def comment_params

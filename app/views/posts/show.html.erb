@@ -28,12 +28,12 @@
       <p>No comments for now. Be the first to comment</p>
     <% else %>
       <% @comments.each do |comment| %>
-        <p class="user_comment_element">
-          <%= comment.user.name%>: <%= comment.text%>
+        <div class="user_comment_element">
+          <p><%= comment.user.name%>: <%= comment.text%></p>
           <% if can? :destroy, comment %>
-            <%= button_to "Delete Comment", post_comment_path(post_id: @post.id, comment_id: comment.id), method: :delete, class: "btn_delete_comment"  %>
+            <%= button_to "Delete Comment", post_comment_path(post_id: @post.id, comment_id: comment.id), method: :delete, data: { turbo: false }, class: "btn_delete_comment"  %>
           <% end %>
-        </p>
+        </div>
       <%end%>
     <% end %>
   </div>
