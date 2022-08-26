@@ -9,6 +9,8 @@ gem 'bullet'
 
 gem 'devise'
 
+gem 'cancancan', '~> 1.9'
+
 gem 'bootstrap_form'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

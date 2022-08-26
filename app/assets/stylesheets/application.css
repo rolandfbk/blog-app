@@ -39,7 +39,7 @@ main {
 }
 
 .list {
-  width: 40%;
+  width: 50%;
 }
 
 .user {
@@ -258,6 +258,40 @@ a {
 
 .btn_signout_from {
   width: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+.btn_delete {
+  display: flex;
+  justify-content: right;
+}
+
+.btn_delete_post {
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+.user_comment_element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn_delete_comment {
+  width: fit-content;
   border: none;
   cursor: pointer;
   background-color: #000;
