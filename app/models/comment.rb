@@ -6,7 +6,7 @@ class Comment < ApplicationRecord
     post.increment!(:comments_counter)
   end
 
-  def as_json(options={})
-    { :id => self.id, :text => self.text, :post_id => self.post_id }
+  def as_json(_options = {})
+    { id: id, text: text, post_id: post_id }
   end
 end

@@ -11,6 +11,7 @@ module Api
           render json: 'Please use the correct key "X-User-Token" and the token provided', status: :ok
         end
       end
+
       def create
         if request.headers['X-User-Token']
           @user = User.find_by_api_token(request.headers['X-User-Token'])
@@ -28,4 +29,4 @@ module Api
       end
     end
   end
-end 
+end
