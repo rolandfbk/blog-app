@@ -14,4 +14,8 @@ class Post < ApplicationRecord
   def most_recent_comments
     comments.order(created_at: :desc).limit(5)
   end
+
+  def as_json(options={})
+    { :id => self.id, :title => self.title, :text => self.text, }
+  end
 end
