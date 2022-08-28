@@ -111,9 +111,6 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json-schema (2.8.1)
-      addressable (>= 2.4)
-    jwt (2.5.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -208,19 +205,6 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rswag (2.5.1)
-      rswag-api (= 2.5.1)
-      rswag-specs (= 2.5.1)
-      rswag-ui (= 2.5.1)
-    rswag-api (2.5.1)
-      railties (>= 3.1, < 7.1)
-    rswag-specs (2.5.1)
-      activesupport (>= 3.1, < 7.1)
-      json-schema (~> 2.2)
-      railties (>= 3.1, < 7.1)
-    rswag-ui (2.5.1)
-      actionpack (>= 3.1, < 7.1)
-      railties (>= 3.1, < 7.1)
     rubyzip (2.3.2)
     selenium-webdriver (4.4.0)
       childprocess (>= 0.5, < 5.0)
@@ -278,13 +262,11 @@ DEPENDENCIES
   devise
   importmap-rails
   jbuilder
-  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
   rails-controller-testing
   rspec-rails (~> 4.0.0)
-  rswag
   selenium-webdriver
   sprockets-rails
   stimulus-rails
